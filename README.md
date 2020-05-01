@@ -20,7 +20,9 @@ In [3]: display(list(cat))
 
 In [4]: ds_field_1 = cat["field_1"].read()  # cast to numpy array. Use to_dask() for lazy read.
 
-In [5]: display(ds_field_1.mean("time"))
+In [5]: ds_field_1 = windeval_catalog.enforce_standard_names(ds_field_1)
+
+In [6]: display(ds_field_1.mean("time"))
 <xarray.Dataset>
 Dimensions:    (latitude: 4, longitude: 4)
 Coordinates:

@@ -16,7 +16,7 @@ def get_windeval_catalog_paths(rel_path=None):
 def set_env_vars():
     """Ensure env vars point to data dir.
 
-    Background: The test data catalog uses `{{env({"WINDEVAL_DATA_DIR"})}}/...` to point to data files. 
+    Background: The test data catalog uses `{{env({"WINDEVAL_DATA_DIR"})}}/...` to point to data files.
     """
     os.environ["WINDEVAL_DATA_DIR"] = str(
         get_windeval_catalog_paths("windeval_data_dir")
