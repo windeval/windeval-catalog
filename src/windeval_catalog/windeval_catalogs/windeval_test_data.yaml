@@ -1,0 +1,44 @@
+metadata:
+  version: 1
+
+plugins:
+  source:
+      - module: intake_xarray
+
+sources:
+
+  field_1:
+    driver: netcdf
+    description: 'First windeval test field'
+    args:
+      urlpath:
+        - "{{env('WINDEVAL_DATA_DIR')}}/windeval_test_data/field_1.cdf"
+      xarray_kwargs:
+        combine: by_coords
+
+  field_2:
+    driver: netcdf
+    description: 'Second windeval test field'
+    args:
+      urlpath:
+        - "{{env('WINDEVAL_DATA_DIR')}}/windeval_test_data/field_2.cdf"
+      xarray_kwargs:
+        combine: by_coords
+
+  station_1:
+    driver: netcdf
+    description: 'First windeval test station'
+    args:
+      urlpath:
+        - "{{env('WINDEVAL_DATA_DIR')}}/windeval_test_data/station_1.cdf"
+      xarray_kwargs:
+        combine: by_coords
+
+  station_2:
+    driver: netcdf
+    description: 'Second windeval test station'
+    args:
+      urlpath:
+        - "{{env('WINDEVAL_DATA_DIR')}}/windeval_test_data/station_2.cdf"
+      xarray_kwargs:
+        combine: by_coords

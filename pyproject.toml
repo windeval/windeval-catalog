@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "windeval_catalog"
+description = "data catalogs for windeval"
+version = "2020.05.01.1"
+authors = ["windeval developers <windeval@googlegroups.com>"]
+
+include = [
+    "src/windeval_catalog/windeval_data_dir/",
+    "src/windeval_catalog/windeval_catalogs/"
+]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
