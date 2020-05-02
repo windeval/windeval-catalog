@@ -1,3 +1,5 @@
+![Tests](https://github.com/windeval/windeval-catalog/workflows/Test/badge.svg)
+
 # Windeval catalogs
 
 Contains a test data catalog for windeval.
