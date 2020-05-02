@@ -1,3 +1,5 @@
 intake
 intake_xarray
 netCDF4
+pytest
+pytest-cov
